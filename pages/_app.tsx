@@ -35,7 +35,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <div dir={isAR ? "rtl" : "ltr"}>
-      <NextNProgress />
+      <NextNProgress color="#f472b6" />
       <Head>
         <title>{t("common:appName")}</title>
         <link rel="icon" href="/favicon.ico" />

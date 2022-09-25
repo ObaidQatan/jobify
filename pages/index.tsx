@@ -1,10 +1,11 @@
 import type { NextPage } from "next";
+import GetStarted from "../src/components/GetStarted";
 import Layout from "../src/components/Layout";
 
 const Home: NextPage = () => {
   return (
     <Layout>
-      <h1>Home</h1>
+      <GetStarted />
     </Layout>
   );
 };
