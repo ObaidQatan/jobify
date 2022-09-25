@@ -7,10 +7,12 @@ const GetStarted = ({ className }: { className?: string }) => {
   const { t } = useTranslation();
 
   return (
-    <div className={`flex justify-between items-center w-full ${className}`}>
+    <div className={`flex justify-center items-center w-full ${className}`}>
       <Waves />
       <div className="info-section flex flex-col">
-        <h1 className="title"></h1>
+        <div className="title">
+          <h1></h1>
+        </div>
 
         <div className="search flex">
           <input type="text" />
