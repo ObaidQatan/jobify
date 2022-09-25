@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import Header from "../Header";
 
 const Main = ({
   children,
@@ -9,10 +10,11 @@ const Main = ({
 }) => {
   return (
     <main
-      className={`min-h-[calc(100vh-6.4rem)] flex flex-col justify-center items-center ${
+      className={`min-h-screen flex flex-col justify-center items-center ${
         /**"max-w-7xl"*/ ""
       } w-full`}
     >
+      <Header />
       <div className={`flex flex-1 w-full ${className}`}>{children}</div>
     </main>
   );

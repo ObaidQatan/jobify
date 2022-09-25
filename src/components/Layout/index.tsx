@@ -26,7 +26,7 @@ const Layout = ({
 
       <Main className={className}>{children}</Main>
 
-      <Footer className="text-black py-5 px-20 text-[14px]">
+      {/* <Footer className="text-black py-5 px-20 text-[14px]">
         <div className="rights text-center">
           <p className="text-[14px]">
             © 2021 {t("appName")}. {t(camelCase("All rights reserved"))}
@@ -45,7 +45,7 @@ const Layout = ({
             </Link>
           ))}
         </div>
-      </Footer>
+      </Footer> */}
     </PageWrapper>
   );
 };

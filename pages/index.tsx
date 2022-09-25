@@ -1,7 +1,12 @@
 import type { NextPage } from "next";
+import Layout from "../src/components/Layout";
 
 const Home: NextPage = () => {
-  return <main className="flex-col items-center">Hello World</main>;
+  return (
+    <Layout>
+      <h1>Home</h1>
+    </Layout>
+  );
 };
 
 export default Home;
