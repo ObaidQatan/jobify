@@ -1,4 +1,4 @@
-import { camelCase } from "lodash";
+import { camelCase, startCase } from "lodash";
 import useTranslation from "next-translate/useTranslation";
 import { Search } from "tabler-icons-react";
 import Header from "../Layout/Header";
@@ -6,7 +6,7 @@ import Man from "./Man";
 import Waves from "./Waves";
 
 const GetStarted = ({ className }: { className?: string }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation("common");
 
   return (
     <div
@@ -22,20 +22,30 @@ const GetStarted = ({ className }: { className?: string }) => {
       <div className="body flex-1 flex z-[1] mx-5">
         <div className="info-section flex-1 flex flex-col max-w-[500px]">
           <div
-            className="title font-bold pt-10"
+            className="title font-bold pt-10 font-[Montserrat-Bold]"
             style={{ wordBreak: "break-word" }}
           >
             <h1 className="text-[32px]">
-              {t(camelCase("Start Your"))}{" "}
-              <span>{t(camelCase("Career"))} </span>
-              {t(camelCase("Journey Now With Jobify"))}
+              {startCase(t(camelCase("Start Your")))}{" "}
+              <span
+                style={{
+                  background: "linear-gradient(90deg, #F372B6, #b064f5)",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                }}
+              >
+                {startCase(t(camelCase("Career")))}{" "}
+              </span>
+              {startCase(t(camelCase("Journey Now With Jobify")))}
             </h1>
           </div>
 
           <div className="search flex bg-white rounded-xl shadow-lg p-2 my-10">
             <input
               type="text"
-              placeholder="example: Starbucks, Burger King, etc"
+              placeholder={`${t("example")}: ${startCase(
+                t("brands.starbucks")
+              )}, ${startCase(t("brands.burgerKing"))}, etc.`}
               className="outline-none flex-1 px-1 py-2 font-[Nunito]"
             />
             <div
@@ -55,7 +65,7 @@ const GetStarted = ({ className }: { className?: string }) => {
             <p className="text-[13px]">
               {t(
                 camelCase(
-                  "Jobify is a platform that helps you find jobs quickly offered by well known bodies"
+                  "Jobify is a platform that helps you find jobs quickly offered by well known parties"
                 )
               )}{" "}
             </p>

@@ -12,6 +12,16 @@
   src: url('../src/assets/fonts/Cairo/Cairo.ttf');
 }
 
+@font-face {
+  font-family: Montserrat;
+  src: url('../src/assets/fonts/Montserrat/Montserrat.ttf');
+}
+
+@font-face {
+  font-family: Montserrat-Bold;
+  src: url('../src/assets/fonts/Montserrat/Montserrat-Bold.ttf');
+}
+
 html,
 body {
   padding: 0;
