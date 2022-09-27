@@ -39,11 +39,8 @@ const Header = () => {
         </div>
         <div className="external-links flex justify-end items-center px-8">
           <Link href="/signin">
-            <a className="hover:underline mx-2">{t("signin")}</a>
-          </Link>
-          <Link href="/freetrial">
             <a className="mx-2 border border-white py-2 px-3 text-white hover:bg-white hover:text-pink-400">
-              {t(camelCase("Start Free Trial"))}
+              {t("signin")}
             </a>
           </Link>
         </div>

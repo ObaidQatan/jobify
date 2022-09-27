@@ -5,6 +5,7 @@ import Header from "../Layout/Header";
 import Man from "./Man";
 import Waves from "./Waves";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const GetStarted = ({ className }: { className?: string }) => {
   const { t, lang } = useTranslation("common");
@@ -84,6 +85,19 @@ const GetStarted = ({ className }: { className?: string }) => {
                 )
               )}{" "}
             </p>
+          </div>
+
+          <div className="links flex justify-start items-center pt-16">
+            <Link href="/freetrial">
+              <a className="py-2 px-3 text-white bg-pink-500">
+                {t(camelCase("Start Free Trial"))}
+              </a>
+            </Link>
+            <Link href="/info">
+              <a className="mx-2 border border-pink-400 py-2 px-3 rounded-md text-pink-500 hover:bg-pink-500 hover:text-white">
+                {t("more")}
+              </a>
+            </Link>
           </div>
         </div>
         <div className="image-section flex-1 relative">
