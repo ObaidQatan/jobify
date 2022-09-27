@@ -4,9 +4,9 @@ const Man = ({ className }: { className?: string }) => {
   const { t } = useTranslation();
 
   return (
-    <div
-      className={`flex justify-between items-center w-full ${className}`}
-    ></div>
+    <div className={className ? className : ""}>
+      <img src="/img/bike.svg" alt="man" />
+    </div>
   );
 };
 

@@ -4,13 +4,18 @@ import Man from "../Man";
 import Polygon from "./Polygon";
 import Star from "./Star";
 
-const Waves = ({ className }: { className?: string }) => {
+const Waves = ({
+  className,
+  style,
+}: {
+  className?: string;
+  style?: React.CSSProperties;
+}) => {
   const { t } = useTranslation();
 
   return (
-    <div className={`${className}`}>
-      <Polygon />
-      <Polygon />
+    <div className={`${className}`} style={style ? style : {}}>
+      <Polygon className=" top-0 right-0" />
       {Array.from({ length: 5 }).map((_, i) => (
         <Star key={i} />
       ))}

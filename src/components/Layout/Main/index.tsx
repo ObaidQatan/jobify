@@ -14,7 +14,6 @@ const Main = ({
         /**"max-w-7xl"*/ ""
       } w-full`}
     >
-      <Header />
       <div className={`flex flex-1 w-full ${className}`}>{children}</div>
     </main>
   );

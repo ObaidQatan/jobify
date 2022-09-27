@@ -10,7 +10,7 @@ const Header = () => {
   const isDark = false;
 
   return (
-    <header className="flex justify-between px-3 py-8 w-full top-0 z-[100] bg-transparent text-white">
+    <header className="flex justify-between px-3 py-8 z-[100] bg-transparent text-white h-fit">
       <Link href="/">
         <a className="flex justify-start items-center hover:opacity-70">
           <LogoIcon className="w-9 mx-2" />
@@ -18,7 +18,7 @@ const Header = () => {
         </a>
       </Link>
 
-      <div className="links flex justify-between items-center flex-[0.7]">
+      <div className="links flex justify-end items-center flex-1">
         <div className="pages flex flex-1 justify-end items-center">
           {["Home", "About", "Pricing", "Find Jobs"].map((link) => (
             <Link href={`/${camelCase(link)}`} key={link}>
@@ -28,7 +28,7 @@ const Header = () => {
             </Link>
           ))}
         </div>
-        <div className="external-links flex flex-1 justify-center items-center">
+        <div className="external-links flex justify-end items-center px-8">
           <Link href="/signin">
             <a className="hover:underline mx-2">{t("signin")}</a>
           </Link>
