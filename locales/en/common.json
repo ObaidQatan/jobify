@@ -1,6 +1,9 @@
 {
   "appName": "Jobify",
-  "en": "English",
+  "english": "English",
+  "arabic": "العربية",
+  "en": "EN",
+  "ar": "ع",
   "show notification": "Show notification",
   "jobify": "Jobify",
   "social": {

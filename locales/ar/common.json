@@ -1,6 +1,9 @@
 {
   "appName": "جوبيفاي",
-  "en": "الإنجليزية",
+  "english": "English",
+  "arabic": "العربية",
+  "en": "EN",
+  "ar": "ع",
   "show notification": "إظهار الإشعارات",
   "jobify": "جوبيفاي",
   "social": {
@@ -112,7 +115,7 @@
     "nike": "نايك",
     "adidas": "أديداس",
     "zara": "زارا",
-    "uniqlo": "يونيكلو",
-    "etc": "إلخ"
-  }
+    "uniqlo": "يونيكلو"
+  },
+  "etc": "إلخ"
 }

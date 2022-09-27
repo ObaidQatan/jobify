@@ -16,7 +16,7 @@ const GetStarted = ({ className }: { className?: string }) => {
     >
       <Header />
       <motion.div
-        initial={{ x: "100px", opacity: 0 }}
+        initial={{ x: isArabic ? "-100px" : "100px", opacity: 0 }}
         animate={{
           x: "0",
           opacity: 1,
@@ -27,7 +27,7 @@ const GetStarted = ({ className }: { className?: string }) => {
       >
         <Waves
           style={{
-            transform: `skew(20deg, ${isArabic ? "-" : ""}20deg)`,
+            transform: "skew(20deg,-20deg)",
             scale: isArabic ? "-1 1" : "1 1",
           }}
         />
@@ -59,7 +59,9 @@ const GetStarted = ({ className }: { className?: string }) => {
               placeholder={`${t("example")}: ${startCase(
                 t("brands.starbucks")
               )}, ${startCase(t("brands.burgerKing"))}, ${t("etc")}`}
-              className="outline-none flex-1 px-1 py-2 font-[Nunito]"
+              className={`outline-none flex-1 px-1 py-2 font-[${
+                isArabic ? "Cairo" : "Nunito"
+              }]`}
             />
             <div
               className="icon rounded-full p-2 cursor-pointer mx-2 text-white"
@@ -87,7 +89,7 @@ const GetStarted = ({ className }: { className?: string }) => {
         <div className="image-section flex-1 relative">
           <motion.div
             className={`w-[500px] absolute ${isArabic ? "left-0" : "right-0"}`}
-            initial={{ x: "700px" }}
+            initial={{ x: isArabic ? "-700px" : "700px" }}
             animate={{ x: "0", transition: { duration: 0.8, type: "spring" } }}
           >
             <Man className={`${isArabic ? "scale-x-[1]" : "scale-x-[-1]"} `} />
