@@ -95,7 +95,7 @@ const GetStarted = ({ className }: { className?: string }) => {
             </Link>
             <Link href="/info">
               <a className="mx-2 border border-pink-400 py-2 px-3 rounded-md text-pink-500 hover:bg-pink-500 hover:text-white">
-                {t("more")}
+                {startCase(t("more"))}
               </a>
             </Link>
           </div>
