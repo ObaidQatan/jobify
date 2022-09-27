@@ -6,7 +6,7 @@ const nextConfig = nextTranslate({
   swcMinify: true,
 
   i18n: {
-    locales: ['en'],
+    locales: ['en','ar'],
     defaultLocale: 'en',
   },
 })

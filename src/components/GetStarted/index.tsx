@@ -7,7 +7,8 @@ import Waves from "./Waves";
 import { motion } from "framer-motion";
 
 const GetStarted = ({ className }: { className?: string }) => {
-  const { t } = useTranslation("common");
+  const { t, lang } = useTranslation("common");
+  const isArabic = lang === "ar";
 
   return (
     <div
@@ -20,11 +21,14 @@ const GetStarted = ({ className }: { className?: string }) => {
           x: "0",
           opacity: 1,
         }}
-        className="absolute top-[-100px] right-[-100px] w-[700px] "
+        className={`absolute top-[-100px] ${
+          isArabic ? "left-[-100px]" : "right-[-100px]"
+        } w-[700px] `}
       >
         <Waves
           style={{
-            transform: "skew(20deg, -10deg)",
+            transform: `skew(20deg, ${isArabic ? "-" : ""}20deg)`,
+            scale: isArabic ? "-1 1" : "1 1",
           }}
         />
       </motion.div>
@@ -54,7 +58,7 @@ const GetStarted = ({ className }: { className?: string }) => {
               type="text"
               placeholder={`${t("example")}: ${startCase(
                 t("brands.starbucks")
-              )}, ${startCase(t("brands.burgerKing"))}, etc.`}
+              )}, ${startCase(t("brands.burgerKing"))}, ${t("etc")}`}
               className="outline-none flex-1 px-1 py-2 font-[Nunito]"
             />
             <div
@@ -82,11 +86,11 @@ const GetStarted = ({ className }: { className?: string }) => {
         </div>
         <div className="image-section flex-1 relative">
           <motion.div
-            className="w-[500px] absolute right-0"
+            className={`w-[500px] absolute ${isArabic ? "left-0" : "right-0"}`}
             initial={{ x: "700px" }}
             animate={{ x: "0", transition: { duration: 0.8, type: "spring" } }}
           >
-            <Man className="scale-x-[-1] " />
+            <Man className={`${isArabic ? "scale-x-[1]" : "scale-x-[-1]"} `} />
           </motion.div>
         </div>
       </div>
