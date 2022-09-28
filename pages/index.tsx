@@ -6,7 +6,7 @@ import Layout from "../src/components/Layout";
 
 const Home: NextPage = () => {
   return (
-    <Layout className="flex-col">
+    <Layout className="flex-col bg-slate-100">
       <GetStarted />
       <Recommended />
       <Links />
