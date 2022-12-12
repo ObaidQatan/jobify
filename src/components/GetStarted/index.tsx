@@ -33,8 +33,8 @@ const GetStarted = ({ className }: { className?: string }) => {
           }}
         />
       </motion.div>
-      <div className="body flex-1 flex z-[1] mx-5">
-        <div className="info-section flex-1 flex flex-col max-w-[500px]">
+      <div className="body flex-1 flex z-[1] mx-5 flex-col md:flex-row">
+        <div className="info-section -translate-y-20 md:-translate-y-0 flex-1 flex flex-col max-w-[500px] z-10 bg-[#ffffff80] backdrop-blur-md md:backdrop-blur-none md:bg-transparent rounded-lg p-5 md:p-0">
           <div
             className="title font-bold pt-10 font-[Montserrat-Bold]"
             style={{ wordBreak: "break-word" }}
@@ -75,7 +75,7 @@ const GetStarted = ({ className }: { className?: string }) => {
           </div>
 
           <div
-            className="description mt-5 max-w-[300px] text-start text-slate-500"
+            className="description mt-5 max-w-[300px] text-start text-pink-500 md:text-slate-500"
             style={{ wordBreak: "break-word" }}
           >
             <p className="text-[13px]">
@@ -94,13 +94,13 @@ const GetStarted = ({ className }: { className?: string }) => {
               </a>
             </Link>
             <Link href="/info">
-              <a className="mx-2 border border-pink-400 py-2 px-3 rounded-md text-pink-500 hover:bg-pink-500 hover:text-white">
+              <a className="mx-2 bg-white border border-pink-400 py-2 px-3 rounded-md text-pink-500 hover:bg-pink-500 hover:text-white">
                 {startCase(t("more"))}
               </a>
             </Link>
           </div>
         </div>
-        <div className="image-section flex-1 relative">
+        <div className="image-section flex-1 md:relative absolute top-5 right-0">
           <motion.div
             className={`w-[500px] absolute ${isArabic ? "left-0" : "right-0"}`}
             initial={{ x: isArabic ? "-700px" : "700px" }}

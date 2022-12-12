@@ -12,7 +12,7 @@ const Header = () => {
   const isDark = false;
 
   return (
-    <header className="flex justify-between px-3 py-8 z-[100] bg-transparent text-white h-fit">
+    <header className=" -translate-y-full md:-translate-y-0 flex justify-between px-3 py-8 z-[100] bg-transparent text-white h-fit">
       <div className="flex items-center">
         <Link href="/">
           <a className="flex justify-start items-center hover:opacity-70">
