@@ -1,5 +1,7 @@
-import { Link } from "../../../types/Link";
-
+type Link = {
+  name: string;
+  path: string;
+};
 export const links: Link[] = [
   {
     name: "Terms & Conditions",
