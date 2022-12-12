@@ -14,7 +14,7 @@ const GetStarted = ({ className }: { className?: string }) => {
         <h1>{startCase(tCommon(camelCase("Recommended Jobs")))}</h1>
       </div>
 
-      <div className="jobs-section flex justify-start w-full overflow-x-auto py-5">
+      <div className="jobs-section flex justify-start md:justify-center w-full overflow-x-auto py-5">
         {[
           {
             id: 1,
