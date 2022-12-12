@@ -1,16 +1,17 @@
-import { camelCase } from "lodash";
+import { camelCase, startCase } from "lodash";
 import useTranslation from "next-translate/useTranslation";
+import Image from "next/image";
 import { ArrowRight, MapPin } from "tabler-icons-react";
 
 const GetStarted = ({ className }: { className?: string }) => {
-  const { t } = useTranslation();
+  const { t: tCommon } = useTranslation("common");
 
   return (
     <div
       className={`flex flex-col justify-center items-center w-full ${className}`}
     >
       <div className="title text-start w-full font-bold p-5">
-        <h1>{t(camelCase("Recommended Jobs"))}</h1>
+        <h1>{startCase(tCommon(camelCase("Recommended Jobs")))}</h1>
       </div>
 
       <div className="jobs-section flex justify-center">
@@ -21,7 +22,7 @@ const GetStarted = ({ className }: { className?: string }) => {
             party: "Domino's Pizza",
             location: "London, UK",
             icon: "/img/parties/dominos.svg",
-            salary: { quantity: 200, currency: "£" },
+            salary: { quantity: 800, currency: "£" },
           },
           {
             id: 2,
@@ -30,6 +31,30 @@ const GetStarted = ({ className }: { className?: string }) => {
             location: "India, Bangalore",
             icon: "/img/parties/starbucks.svg",
             salary: { quantity: 12000, currency: "₹" },
+          },
+          {
+            id: 3,
+            title: "Cashier",
+            party: "Walmart",
+            location: "United States, New York",
+            icon: "https://upload.wikimedia.org/wikipedia/commons/c/ca/Walmart_logo.svg",
+            salary: { quantity: 1000, currency: "$" },
+          },
+          {
+            id: 4,
+            title: "Delivery Driver",
+            party: "Amazon",
+            location: "Saudi Arabia, Riyadh",
+            icon: "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg",
+            salary: { quantity: 900, currency: "SR" },
+          },
+          {
+            id: 5,
+            title: "Sales Person",
+            party: "Reliance Digital",
+            location: "India, Mumbai",
+            icon: "https://upload.wikimedia.org/wikipedia/commons/a/ad/Reliance_Digital.svg",
+            salary: { quantity: 15000, currency: "₹" },
           },
         ].map(
           (
@@ -47,8 +72,13 @@ const GetStarted = ({ className }: { className?: string }) => {
               key={i}
               className="card bg-white p-5 mx-2 rounded-md flex flex-col items-center shadow-md hover:shadow-xl hover:scale-105 hover:bg-gradient-to-br hover:from-[#F372B6] hover:to-[#a247f8] hover:text-white"
             >
-              <div className="image w-[80px] h-[80px] m-8 bg-white rounded-full">
-                <img src={recommendedJob.icon} alt={recommendedJob.party} />
+              <div className="image w-[80px] h-[80px] m-8 bg-white rounded-full relative">
+                <Image
+                  src={recommendedJob.icon}
+                  alt={recommendedJob.party}
+                  layout="fill"
+                  objectFit="fill"
+                />
               </div>
 
               <div className="divider bg-black bg-opacity-10 h-[1.5px] rounded-md min-w-[200px]"></div>
@@ -70,7 +100,7 @@ const GetStarted = ({ className }: { className?: string }) => {
                       transition: "0s",
                     }}
                   >
-                    {t(camelCase(recommendedJob.title))}
+                    {startCase(tCommon(camelCase(`${recommendedJob.title}`)))}
                   </h3>
                 </div>
 
@@ -85,7 +115,9 @@ const GetStarted = ({ className }: { className?: string }) => {
                       transition: "0s",
                     }}
                   >
-                    {t(camelCase(recommendedJob.party))}
+                    {startCase(
+                      tCommon(`brands.${camelCase(recommendedJob.party)}`)
+                    )}
                   </h3>
                 </div>
 
@@ -109,7 +141,7 @@ const GetStarted = ({ className }: { className?: string }) => {
                       transition: "0s",
                     }}
                   >
-                    {t(camelCase(recommendedJob.location))}
+                    {startCase(tCommon(camelCase(recommendedJob.location)))}
                   </p>
                 </div>
               </div>
@@ -126,7 +158,7 @@ const GetStarted = ({ className }: { className?: string }) => {
                     transition: "0s",
                   }}
                 >
-                  {recommendedJob.salary.currency}
+                  {recommendedJob.salary.currency}{" "}
                   {recommendedJob.salary.quantity}
                 </div>
                 <div

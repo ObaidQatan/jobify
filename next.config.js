@@ -13,7 +13,7 @@ const nextConfig = nextTranslate({
 
 nextConfig.images = {
   domains: [
-    
+    "upload.wikimedia.org"
   ],
 }
 

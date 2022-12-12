@@ -115,8 +115,13 @@
     "nike": "Nike",
     "adidas": "Adidas",
     "zara": "Zara",
-    "uniqlo": "Uniqlo"
+    "uniqlo": "Uniqlo",
+    "dominosPizza": "Dominos Pizza"
   },
   "etc": "etc",
-  "more": "more"
+  "more": "more",
+  "job": {
+    "deliveryDriver": "Delivery Driver",
+    "barista": "Barista"
+  }
 }
