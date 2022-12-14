@@ -1,10 +1,8 @@
 import { camelCase } from "lodash";
 import useTranslation from "next-translate/useTranslation";
-import Link from "next/link";
 import { ReactNode } from "react";
 import useDetectSmallScreen from "../../hooks/useDetectSmallScreen";
 import Footer from "./Footer";
-import { links } from "./Footer/links";
 import Main from "./Main";
 import PageWrapper from "./PageWrapper";
 import SideBar from "./SideBar";
@@ -33,17 +31,6 @@ const Layout = ({
           </p>
         </div>
         <div className="links flex">
-          {links.map((link, i) => (
-            <Link href={link.path} key={link.name}>
-              <a
-                className={`flex justify-center items-center px-2 hover:text-cyan-500 ${
-                  i !== links.length - 1 ? "border-r border-black" : ""
-                }`}
-              >
-                {t(camelCase(link.name))}
-              </a>
-            </Link>
-          ))}
         </div>
       </Footer> */}
     </PageWrapper>

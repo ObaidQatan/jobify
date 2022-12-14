@@ -48,6 +48,6 @@ a {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: grey;
+  background-color: rgba(255, 20, 145, 0.319);
   border-radius: 10px;
 }

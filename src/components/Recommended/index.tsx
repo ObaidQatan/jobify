@@ -72,7 +72,7 @@ const GetStarted = ({ className }: { className?: string }) => {
               key={i}
               className="card bg-white p-5 mx-2 rounded-md flex flex-col items-center shadow-md hover:shadow-xl hover:scale-105 hover:bg-gradient-to-br hover:from-[#F372B6] hover:to-[#a247f8] hover:text-white"
             >
-              <div className="image w-[80px] h-[80px] m-8 bg-white rounded-full relative">
+              <div className="image w-[80px] h-[80px] m-8 bg-[#ffffff70] rounded-full relative">
                 <Image
                   src={recommendedJob.icon}
                   alt={recommendedJob.party}
