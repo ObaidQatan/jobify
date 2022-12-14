@@ -8,7 +8,7 @@ const GetStarted = ({ className }: { className?: string }) => {
 
   return (
     <div
-      className={`flex flex-col justify-center items-center w-full ${className}`}
+      className={`flex flex-col justify-center items-center w-full mb-5 ${className}`}
     >
       <div className="title text-start w-full font-bold p-5">
         <h1>{startCase(tCommon(camelCase("Recommended Jobs")))}</h1>
@@ -20,7 +20,8 @@ const GetStarted = ({ className }: { className?: string }) => {
             id: 1,
             title: "Delivery Driver",
             party: "Domino's Pizza",
-            location: "London, UK",
+            country: "United Kingdom",
+            city: "London",
             icon: "/img/parties/dominos.svg",
             salary: { quantity: 800, currency: "£" },
           },
@@ -28,33 +29,37 @@ const GetStarted = ({ className }: { className?: string }) => {
             id: 2,
             title: "Barista",
             party: "Starbucks",
-            location: "India, Bangalore",
             icon: "/img/parties/starbucks.svg",
             salary: { quantity: 12000, currency: "₹" },
+            country: "India",
+            city: "Bangalore",
           },
           {
             id: 3,
             title: "Cashier",
             party: "Walmart",
-            location: "United States, New York",
             icon: "https://upload.wikimedia.org/wikipedia/commons/c/ca/Walmart_logo.svg",
             salary: { quantity: 1000, currency: "$" },
+            country: "United States",
+            city: "New York",
           },
           {
             id: 4,
             title: "Delivery Driver",
             party: "Amazon",
-            location: "Saudi Arabia, Riyadh",
             icon: "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg",
             salary: { quantity: 900, currency: "SR" },
+            country: "Saudi Arabia",
+            city: "Riyadh",
           },
           {
             id: 5,
             title: "Sales Person",
             party: "Reliance Digital",
-            location: "India, Mumbai",
             icon: "https://upload.wikimedia.org/wikipedia/commons/a/ad/Reliance_Digital.svg",
             salary: { quantity: 15000, currency: "₹" },
+            country: "India",
+            city: "Mumbai",
           },
         ].map(
           (
@@ -62,7 +67,8 @@ const GetStarted = ({ className }: { className?: string }) => {
               id: number;
               title: string;
               party: string;
-              location: string;
+              country: string;
+              city: string;
               icon: string;
               salary: { quantity: number; currency: string };
             },
@@ -141,7 +147,8 @@ const GetStarted = ({ className }: { className?: string }) => {
                       transition: "0s",
                     }}
                   >
-                    {startCase(tCommon(camelCase(recommendedJob.location)))}
+                    {startCase(tCommon(recommendedJob.country))},{" "}
+                    {startCase(tCommon(recommendedJob.city))}
                   </p>
                 </div>
               </div>

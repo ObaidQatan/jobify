@@ -6,7 +6,7 @@ function LogoIcon({ className }: { className?: string }) {
       xmlns="http://www.w3.org/2000/svg"
       fill="currentColor"
       viewBox="0 0 24 24"
-      className={`text-pink-400 ${className ? className : ""}`}
+      className={`md:text-pink-400 text-white ${className ? className : ""}`}
     >
       <path
         fillRule="evenodd"

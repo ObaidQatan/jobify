@@ -5,7 +5,7 @@ import Link from "next/link";
 import { linksGroups } from "../links";
 
 const LinksContent = () => {
-  const { t } = useTranslation("profile");
+  const { t } = useTranslation("common");
 
   return (
     <SimpleGrid cols={4} breakpoints={[{ maxWidth: 600, cols: 1 }]}>

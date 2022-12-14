@@ -5,7 +5,7 @@ const LogoText = ({ className }: { className?: string }) => {
   const { t } = useTranslation("common");
 
   return (
-    <h3 className="text-pink-400 font-bold text-[20px] align-baseline">
+    <h3 className="md:text-pink-400 text-white font-bold text-[15px] md:text-[20px] align-baseline">
       {t("appName")}
     </h3>
   );

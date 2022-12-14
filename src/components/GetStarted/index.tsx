@@ -33,22 +33,24 @@ const GetStarted = ({ className }: { className?: string }) => {
           }}
         />
       </motion.div>
-      <div className="body flex-1 flex z-[1] mx-5 flex-col md:flex-row">
-        <div className="info-section -translate-y-20 md:-translate-y-0 flex-1 flex flex-col max-w-[500px] z-10 bg-[#ffffff80] backdrop-blur-md md:backdrop-blur-none md:bg-transparent rounded-lg p-5 md:p-0">
+      <div className="body flex-1 flex z-[1] mx-5 flex-col md:flex-row items-center md:items-start">
+        <div className="info-section flex-1 flex flex-col max-w-[500px] mt-5 md:mt-0 z-10 bg-[#ffffff80] backdrop-blur-md md:backdrop-blur-none md:bg-transparent rounded-lg p-5 md:p-0">
           <div
             className="title font-bold pt-10 font-[Montserrat-Bold]"
             style={{ wordBreak: "break-word" }}
           >
             <h1 className="text-[32px]">
-              {startCase(t(camelCase("Start Your")))}{" "}
-              <span
-                style={{
-                  background: "linear-gradient(90deg, #F372B6, #b064f5)",
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
-                }}
-              >
-                {startCase(t(camelCase("Career")))}{" "}
+              {startCase(t(camelCase("Start Your")))}
+              <span className="bg-[#ffffff80] rounded-lg p-2 mx-1">
+                <span
+                  style={{
+                    background: "linear-gradient(90deg, #F372B6, #b064f5)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                  }}
+                >
+                  {startCase(t(camelCase("Career")))}
+                </span>
               </span>
               {startCase(t(camelCase("Journey Now With Jobify")))}
             </h1>
@@ -75,7 +77,7 @@ const GetStarted = ({ className }: { className?: string }) => {
           </div>
 
           <div
-            className="description mt-5 max-w-[300px] text-start text-pink-500 md:text-slate-500"
+            className="description mt-5 max-w-[300px] text-start text-white md:text-slate-500"
             style={{ wordBreak: "break-word" }}
           >
             <p className="text-[13px]">

@@ -12,16 +12,16 @@ const Header = () => {
   const isDark = false;
 
   return (
-    <header className=" -translate-y-full md:-translate-y-0 flex justify-between px-3 py-8 z-[100] bg-transparent text-white h-fit">
-      <div className="flex items-center">
+    <header className=" bg-[#ffffff10] backdrop-blur-sm md:backdrop-blur-none flex justify-between px-3 py-5 md:py-8 z-[100] md:bg-transparent text-white h-fit text-[12px] md:text-[15px]">
+      <div className="flex items-center rounded-lg">
         <Link href="/">
           <a className="flex justify-start items-center hover:opacity-70">
             <LogoIcon className="w-9 mx-2" />
-            <LogoText className="w-[200px]" />
+            <LogoText />
           </a>
         </Link>
         <Link href={router.asPath} locale={lang === "en" ? "ar" : "en"}>
-          <a className="text-pink-400 mx-2 flex justify-center items-center text-[15px] border rounded-md p-1 h-fit">
+          <a className="md:text-pink-400 text-white mx-2 flex justify-center items-center text-[15px] border rounded-md p-1 h-fit">
             {t(lang === "en" ? "ar" : "en")}
           </a>
         </Link>
